@@ -10,7 +10,7 @@ namespace DSA_Practice
     {
         static void Main(string[] args)
         {
-            new HeightCheckerProblem().Evaluate();
+            new HeightCheckerProblem_Brutforce().Evaluate();
         }
     }
 }

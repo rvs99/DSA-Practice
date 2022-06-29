@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Practice
 {
-    class HeightCheckerProblem : ILeetCode
+    class HeightCheckerProblem_Brutforce : ILeetCode
     {
         public int SolutionFunction(int[] heights)
         {
