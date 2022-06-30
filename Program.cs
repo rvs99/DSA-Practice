@@ -11,7 +11,8 @@ namespace DSA_Practice
         static void Main(string[] args)
         {
             //new HeightCheckerProblem_Brutforce().Evaluate();
-            new HeightCheckerProblem_Solution1().Evaluate();
+            //new HeightCheckerProblem_Solution1().Evaluate();
+            new ThirdMaximumNumber().Evaluate();
         }
     }
 }
