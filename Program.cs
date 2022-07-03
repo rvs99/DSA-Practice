@@ -13,7 +13,8 @@ namespace DSA_Practice
             //new HeightCheckerProblem_Brutforce().Evaluate();
             //new HeightCheckerProblem_Solution1().Evaluate();
             //new ThirdMaximumNumber().Evaluate();
-            new FindDisappearedNumbers().Evaluate();
+            //new FindDisappearedNumbers().Evaluate();
+            new SquaresOfSortedArray().Evaluate();
         }
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="ILeetCode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SquaresOfSortedArray.cs" />
     <Compile Include="ThirdMaximumNumber.cs" />
   </ItemGroup>
   <ItemGroup>
