@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindDisappearedNumbers.cs" />
     <Compile Include="HeightCheckerProblem_Solution1.cs" />
     <Compile Include="HeightCheckerProblem_Brutforce.cs" />
     <Compile Include="ILeetCode.cs" />
