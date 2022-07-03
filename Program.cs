@@ -14,7 +14,8 @@ namespace DSA_Practice
             //new HeightCheckerProblem_Solution1().Evaluate();
             //new ThirdMaximumNumber().Evaluate();
             //new FindDisappearedNumbers().Evaluate();
-            new SquaresOfSortedArray().Evaluate();
+            //new SquaresOfSortedArray().Evaluate();
+            new PivotSumIndex().Evaluate();
         }
     }
 }
