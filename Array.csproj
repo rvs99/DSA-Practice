@@ -49,6 +49,7 @@
     <Compile Include="ILeetCode.cs" />
     <Compile Include="LargestNumberAtLeastTwiceOfOthers.cs" />
     <Compile Include="PivotSumIndex.cs" />
+    <Compile Include="PlusOne.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SquaresOfSortedArray.cs" />

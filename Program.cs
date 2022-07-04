@@ -16,7 +16,8 @@ namespace DSA_Practice
             //new FindDisappearedNumbers().Evaluate();
             //new SquaresOfSortedArray().Evaluate();
             //new PivotSumIndex().Evaluate();
-            new LargestNumberAtLeastTwiceOfOthers().Evaluate();
+            //new LargestNumberAtLeastTwiceOfOthers().Evaluate();
+            new PlusOne().Evaluate();
         }
     }
 }
