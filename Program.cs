@@ -10,6 +10,7 @@ namespace DSA_Practice
     {
         static void Main(string[] args)
         {
+            //1D Array questions
             //new HeightCheckerProblem_Brutforce().Evaluate();
             //new HeightCheckerProblem_Solution1().Evaluate();
             //new ThirdMaximumNumber().Evaluate();
@@ -17,7 +18,11 @@ namespace DSA_Practice
             //new SquaresOfSortedArray().Evaluate();
             //new PivotSumIndex().Evaluate();
             //new LargestNumberAtLeastTwiceOfOthers().Evaluate();
-            new PlusOne().Evaluate();
+            //new PlusOne().Evaluate();
+
+            //2D Array questions
+            //new DiagonalTraverseMatrix().Evaluate();
+            new SpiralTraversalMatrix().Evaluate();
         }
     }
 }

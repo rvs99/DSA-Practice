@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiagonalTraverseMatrix.cs" />
     <Compile Include="FindDisappearedNumbers.cs" />
     <Compile Include="HeightCheckerProblem_Solution1.cs" />
     <Compile Include="HeightCheckerProblem_Brutforce.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="PlusOne.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpiralTraversalMatrix.cs" />
     <Compile Include="SquaresOfSortedArray.cs" />
     <Compile Include="ThirdMaximumNumber.cs" />
   </ItemGroup>
