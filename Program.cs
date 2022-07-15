@@ -21,8 +21,8 @@ namespace DSA_Practice
             //new PlusOne().Evaluate();
 
             //2D Array questions
-            //new DiagonalTraverseMatrix().Evaluate();
-            new SpiralTraversalMatrix().Evaluate();
+            new DiagonalTraverseMatrix().Evaluate();
+            //new SpiralTraversalMatrix().Evaluate();
         }
     }
 }

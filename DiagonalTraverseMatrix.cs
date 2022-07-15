@@ -14,8 +14,13 @@ namespace DSA_Practice
         public void Evaluate()
         {
             List<Tuple<int[][], List<int>>> tuples = new List<Tuple<int[][], List<int>>>();
-            tuples.Add(Tuple.Create(new int[][] { new int[]{ 1, 2, 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8, 9 } }, new List<int>() { 1, 2, 4, 7, 5, 3, 6, 8, 9 }));
-            tuples.Add(Tuple.Create(new int[][] { new int[] { 1, 2 }, new int[] { 3, 4} }, new List<int>() { 1, 2, 3, 4 }));
+            tuples.Add(Tuple.Create(new int[][] { new int[] { 1, 2, 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8, 9 } }, new List<int>() { 1, 2, 4, 7, 5, 3, 6, 8, 9 }));
+            tuples.Add(Tuple.Create(new int[][] { new int[] { 1, 2 }, new int[] { 3, 4 } }, new List<int>() { 1, 2, 3, 4 }));
+            tuples.Add(Tuple.Create(new int[][] { new int[] { 1 } }, new List<int>() { 1 }));
+            tuples.Add(Tuple.Create(new int[][] { new int[] { 1, 2, 3, 4 }, new int[] { 5, 6, 7, 8 }, new int[] { 9, 10, 11, 12 }, new int[] { 13, 14, 15, 16 } }, new List<int>() { 1, 2, 5, 9, 6, 3, 4, 7, 10, 13, 14, 11, 8, 12, 15, 16 }));
+
+
+            
             foreach (var t in tuples)
             {
                 var output = new DiagonalTraverseMatrix().SolutionFunction(t.Item1);
@@ -39,27 +44,35 @@ namespace DSA_Practice
 
         private int[] SolutionFunction(int[][] mat)
         {
-            int height = mat.Length;    //no of rows
-            int length = mat[0].Length;     //no of columns
-
-            int[] returnArray = new int[height * length];
-
+            bool upDirection = true;
             int row = 0, column = 0;
+            int lastRow = mat.Length - 1;
+            int lastColumn = mat[0].Length - 1;
+            int[] result = new int[mat.Length * mat[0].Length];
+            int i = 0;
 
-            for (int i = 0; i < height * length; i++)
+            while (row <= lastRow && column <= lastColumn)
             {
-                returnArray[i] = mat[row][column];
-
-                //Up direction
-                if ((row + column) % 2 == 0)
+                if (upDirection)
                 {
-                    if (column == length - 1)
+                    result[i++] = mat[row][column];
+
+                    if (i >= result.Length)
+                        break;
+
+                    if (row == 0)
+                    {
+                        if (column < lastColumn)
+                            column++;
+                        else
+                            row++;
+
+                        upDirection = false;
+                    }
+                    else if (column == lastColumn)
                     {
                         row++;
-                    }
-                    else if (row == 0)
-                    {
-                        column++;
+                        upDirection = false;
                     }
                     else
                     {
@@ -67,17 +80,26 @@ namespace DSA_Practice
                         column++;
                     }
                 }
-
-                //Downword direction
                 else
                 {
-                    if (row == height - 1)
+                    result[i++] = mat[row][column];
+
+                    if (i >= result.Length)
+                        break;
+
+                    if (column == 0)
                     {
-                        column++;
+                        if (row < lastRow)
+                            row++;
+                        else
+                            column++;
+
+                        upDirection = true;
                     }
-                    else if (column == 0)
+                    else if (row == lastRow)
                     {
-                        row++;
+                        upDirection = true;
+                        column++;
                     }
                     else
                     {
@@ -87,7 +109,8 @@ namespace DSA_Practice
                 }
             }
 
-            return returnArray;
+            return result;
+
         }
     }
 }
