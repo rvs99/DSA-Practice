@@ -26,7 +26,7 @@ namespace DSA_Practice
                 var output = new DiagonalTraverseMatrix().SolutionFunction(t.Item1);
 
                 //Input
-                //Console.WriteLine($"Input : {string.Join(", ", t.Item1)}");
+                Console.WriteLine($"Input : {string.Join<int[]>(", ", t.Item1)}");
 
                 //Expected Output
                 Console.WriteLine($"Expected Output : {string.Join(", ", t.Item2)}");

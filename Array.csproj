@@ -49,10 +49,12 @@
     <Compile Include="HeightCheckerProblem_Brutforce.cs" />
     <Compile Include="ILeetCode.cs" />
     <Compile Include="LargestNumberAtLeastTwiceOfOthers.cs" />
+    <Compile Include="PascalsTriangle.cs" />
     <Compile Include="PivotSumIndex.cs" />
     <Compile Include="PlusOne.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpiralTraversalMatrix1.cs" />
     <Compile Include="SpiralTraversalMatrix.cs" />
     <Compile Include="SquaresOfSortedArray.cs" />
     <Compile Include="ThirdMaximumNumber.cs" />
