@@ -4,22 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA_Practice
+namespace DSA_Practice.Array
 {
-    class PivotSumIndex
+    class LargestNumberAtLeastTwiceOfOthers : ILeetCode
     {
         public void Evaluate()
         {
             List<Tuple<int[], int>> tuples = new List<Tuple<int[], int>>();
-            tuples.Add(Tuple.Create(new int[] { -1, -1, -1, -1, -1, -1 }, -1));
-            tuples.Add(Tuple.Create(new int[] { 1, 7, 3, 6, 5, 6 }, 3));
-            tuples.Add(Tuple.Create(new int[] { 1, 2, 3 }, -1));
-            tuples.Add(Tuple.Create(new int[] { 2, 1, -1 }, 0));
+            tuples.Add(Tuple.Create(new int[] { 3, 6, 1, 0 }, 1));
+            tuples.Add(Tuple.Create(new int[] { 1, 2, 3, 4 }, -1));
             tuples.Add(Tuple.Create(new int[] { 1 }, 0));
+            tuples.Add(Tuple.Create(new int[] { 2, 0, 0, 3 }, -1));
 
             foreach (var t in tuples)
             {
-                var output = new PivotSumIndex().SolutionFunction(t.Item1);
+                var output = new LargestNumberAtLeastTwiceOfOthers().SolutionFunction(t.Item1);
 
                 //Input
                 Console.WriteLine($"Input : {string.Join(", ", t.Item1)}");
@@ -28,7 +27,7 @@ namespace DSA_Practice
                 Console.WriteLine($"Expected Output : {string.Join(", ", t.Item2)}");
 
                 //Actual Output
-                Console.ForegroundColor = t.Item2.Equals( output) ? ConsoleColor.Green : ConsoleColor.Red;
+                Console.ForegroundColor = t.Item2.Equals(output) ? ConsoleColor.Green : ConsoleColor.Red;
                 Console.WriteLine("Actual Output : " + string.Join(", ", output));
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("-----------------------------------------------------------------------");
@@ -40,31 +39,24 @@ namespace DSA_Practice
 
         private int SolutionFunction(int[] nums)
         {
-            int leftSum = 0;
-            int rightSum = 0;
-            int sum = 0;
-            
-            for (int i = 0; i < nums.Length; i++)
+            int largestIndex = 0;
+            for (int i = 1; i < nums.Length; i++)
             {
-                sum += nums[i];
+                if (nums[i] > nums[largestIndex])
+                    largestIndex = i;
             }
 
-            rightSum = sum;
+            Console.WriteLine("Largest Index : " + largestIndex);
 
             for (int i = 0; i < nums.Length; i++)
             {
-                rightSum -= nums[i];
-
-                if (leftSum == rightSum)
+                if (i != largestIndex && (nums[i] * 2 > nums[largestIndex]))
                 {
-                    return i;
+                    return -1;
                 }
-                else
-                    leftSum += nums[i]; 
             }
 
-            return -1;
+            return largestIndex;
         }
-
     }
 }

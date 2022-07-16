@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA_Practice
+namespace DSA_Practice.Array
 {
     class HeightCheckerProblem_Brutforce : ILeetCode
     {
@@ -12,7 +12,7 @@ namespace DSA_Practice
         {
             int[] expected = (int[]) heights.Clone();
             int unmatchedCount = 0;
-            Array.Sort(expected);
+            System.Array.Sort(expected);
 
             for (int i = 0; i < heights.Length; i++)
             {
