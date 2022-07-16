@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindIndexInString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="BinaryStringAddition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

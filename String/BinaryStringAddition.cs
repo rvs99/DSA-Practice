@@ -18,7 +18,7 @@ namespace String
 
             foreach (var t in tuples)
             {
-                var output = new BinaryStringAddition().SolutionFunction(t.Item1, t.Item2);
+                var output = this.SolutionFunction(t.Item1, t.Item2);
                 
                 //Input
                 Console.WriteLine($"Input : {t.Item1} + {t.Item2}");

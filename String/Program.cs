@@ -32,7 +32,9 @@ namespace String
             //sb.Insert(0, "R");
             //Console.WriteLine(sb);
 
-            new BinaryStringAddition().Evaluate();
+            //new BinaryStringAddition().Evaluate();
+
+            new FindIndexInString().Evaluate();
         }
     }
 }
