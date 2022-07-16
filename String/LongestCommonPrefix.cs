@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace String
 {
+    /// <summary>
+    /// Longest Common prefix solved by Brutforce. TC is Log (S) where s is the sum of all characters of all strings.
+    /// This can be solved by other methods like Divide and Conquer, Binary search
+    /// Refer for other methods: https://leetcode.com/problems/longest-common-prefix/solution/
+    /// </summary>
     class LongestCommonPrefix : ILeetCode
     {
         public void Evaluate()
