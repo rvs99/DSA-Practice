@@ -34,7 +34,8 @@ namespace String
 
             //new BinaryStringAddition().Evaluate();
 
-            new FindIndexInString().Evaluate();
+            //new FindIndexInString().Evaluate();
+            new LongestCommonPrefix().Evaluate();
         }
     }
 }

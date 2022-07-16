@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FindIndexInString.cs" />
+    <Compile Include="LongestCommonPrefix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="BinaryStringAddition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
